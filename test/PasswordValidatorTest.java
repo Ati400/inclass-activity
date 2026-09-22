@@ -8,5 +8,15 @@ public class PasswordValidatorTest {
         PasswordValidator validator = new PasswordValidator();
         assertFalse(validator.isValid("abcdefg"));
     }
+    
+    @Test
+    public void passwordMustContainAnUppercaseLetter() {
+
+        PasswordValidator validator =
+            new PasswordValidator();
+
+        assertFalse(validator.isValid("abcdefgh"));
+    }
+
 }
 
