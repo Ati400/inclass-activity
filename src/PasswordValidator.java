@@ -12,7 +12,8 @@ public class PasswordValidator {
 
     public boolean isValid(String password) {
         if (password.length() >= 8 &&
-            !password.equals(password.toLowerCase())) {
+            !password.equals(password.toLowerCase()) &&
+            password.matches(".*[0-9].*")) {
             return true;
         }
         return false;

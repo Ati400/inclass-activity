@@ -17,6 +17,11 @@ public class PasswordValidatorTest {
 
         assertFalse(validator.isValid("abcdefgh"));
     }
-
+    
+    @Test
+    public void passwordMustContainANumber() {
+        PasswordValidator validator = new PasswordValidator();
+        assertFalse(validator.isValid("Abcdefgh"));
+    }
 }
 
