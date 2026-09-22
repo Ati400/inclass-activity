@@ -23,5 +23,11 @@ public class PasswordValidatorTest {
         PasswordValidator validator = new PasswordValidator();
         assertFalse(validator.isValid("Abcdefgh"));
     }
+    
+    @Test
+    public void passwordMustContainSpecialCharacter() {
+        PasswordValidator validator = new PasswordValidator();
+        assertFalse(validator.isValid("Abcdefg1"));
+    }
 }
 
